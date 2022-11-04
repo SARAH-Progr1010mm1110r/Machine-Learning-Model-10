@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+
+    <title>Titanic Home</title>
+</head>
+
+<body>
+
+    <h1>Content garments worker productivity Prediction the actual productivity</h1>
+
+    <p>Enter the feature here</p>
+
+    <form action="{{url_for('predict')}}" method="post">
+
+        <!-- Input From The User -->
+
+        <ul>
+      
+
+
+        <!-- This is the title for the input-->
+
+        <li><label for="class">quarter:</label>
+        <select id="class" name="class" required="required">
+            <option value="">--Please choose an option--</option>
+            <option value="Quarter1">Quarter1</option>
+            <option value="Quarter2">Quarter2</option>
+            <option value="Quarter3">Quarter3</option>
+            <option value="Quarter4">Quarter4</option>
+            <option value="Quarter5">Quarter5</option>
+        </select></li>
+
+        <li><label for="department">department:</label>
+            <select id="department" name="department" required="required">
+                <option value="">--Please choose an option--</option>
+                <option value="sweing">sweing</option>
+                <option value="finishing">finishing</option>
+            </select>
+        </li>
+
+        <li><label for="day">day:</label>
+            <select id="day" name="day" required="required">
+                <option value="">--Please choose an option--</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+            </select>
+        </li>
+
+        <li><label for="parch">Number of team:</label>
+            <input type="text" name="parch" placeholder="Number between 1 and 12" required="required" />
+        </li>
+
+        <li><label for="targeted_productivity">Targeted Productivity:</label>
+            <!-- placeholder is the hint text-->
+              <input type="text" name="targeted_productivity" placeholder="targeted_productivity" required="required" />
+        </li>
+
+        <li><label for="smv">smv:</label>
+            <!-- placeholder is the hint text-->
+              <input type="text" name="smv" placeholder="smv" required="required" />
+        </li>
+
+        <li><label for="wip">wip:</label>
+            <!-- placeholder is the hint text-->
+              <input type="text" name="wip" placeholder="wip" required="required" />
+        </li>
+
+        <li><label for="over_time">over_time:</label>
+            <!-- placeholder is the hint text-->
+              <input type="text" name="over_time" placeholder="over_time" required="required" />
+        </li>
+
+        
+        <li><label for="incentive">incentive:</label>
+            <!-- placeholder is the hint text-->
+              <input type="text" name="incentive" placeholder="incentive" required="required" />
+        </li>
+
+        <li><label for="no_of_style_change">Number of style change:</label>
+            <!-- placeholder is the hint text-->
+              <input type="text" name="no_of_style_change" placeholder="no_of_style_change" required="required" />
+        </li>
+
+        <li><label for="no_of_workers">Number of workers:</label>
+            <!-- placeholder is the hint text-->
+              <input type="text" name="no_of_workers" placeholder="no_of_workers" required="required" />
+        </li>
+
+        <!-- submit button -->
+        <li><button id="submit" type="submit">Predict</button></li>
+        </ul>
+
+    </form>
+
+</body>
+</html>
